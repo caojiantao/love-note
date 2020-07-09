@@ -1,0 +1,17 @@
+<view class="album-wrapper">
+  <view class="album">
+    <view class="album-cover-wrapper" bindtap="toAlbumSave">
+      <view class="album-add">
+        <image src="/images/add.png"></image>
+        <text>新建相册</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="album" wx:for="{{albumList}}" wx:key="index">
+    <view class="album-cover-wrapper">
+      <image class="album-cover" src="{{item.cover}}" mode="aspectFill"></image>
+    </view>
+    <text class="album-title">{{item.title}}</text>
+  </view>
+</view>

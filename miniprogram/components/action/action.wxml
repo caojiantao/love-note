@@ -1,0 +1,25 @@
+<view class="action-wrapper">
+  <view class="action-avatar">
+    <image src="{{action.user.avatarUrl}}"></image>
+  </view>
+  <view class="action-main">
+    <view class="action-nickname">
+      {{action.user.nickName}}
+    </view>
+    <!-- slot -->
+    <view class="action-content">
+      <Article wx:if="{{action.type=='article'}}" article="{{action.article}}"></Article>
+      <Album wx:if="{{action.type=='album'}}" album="{{action.album}}"></Album>
+    </view>
+    <view class="action-extra">
+      <view class="action-time">
+        {{action.timeFmt}}
+      </view>
+      <view class="action-comment">
+        <image src="/images/comment.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="action-comment">
+</view>

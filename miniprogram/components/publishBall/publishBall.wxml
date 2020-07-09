@@ -1,0 +1,3 @@
+<view class="publish">
+  <image src="/images/publish.png" bindtap="toArticleSave"></image>
+</view>

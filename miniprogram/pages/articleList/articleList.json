@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "心事",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "Action": "../../components/action/action",
+    "LoadMore": "../../components/loadMore/loadMore"
+  }
+}

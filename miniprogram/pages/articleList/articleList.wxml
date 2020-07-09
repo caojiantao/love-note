@@ -1,0 +1,3 @@
+<Action action="{{item}}" wx:for="{{actionList}}" wx:key="index"/>
+
+<LoadMore wx:if="{{actionList.length >= pageSize}}" loading="{{!finish}}"></LoadMore>

@@ -1,0 +1,23 @@
+.couple-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.couple-info {
+  position: relative;
+}
+
+.couple-mine, .couple-partner {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid pink;
+}
+
+.couple-partner {
+  position: absolute;
+  left: 45px;
+  z-index: -1;
+}

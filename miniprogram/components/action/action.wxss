@@ -1,0 +1,41 @@
+/* components/post/post.wxss */
+.action-wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  border-bottom: 1px solid #f6f6f6;
+  background-color: #fff;
+}
+
+.action-main {
+  flex: auto;
+  padding: 0 10px;
+}
+
+.action-extra {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-avatar {
+  padding-top: 5px;
+}
+
+.action-avatar image {
+  width: 45px;
+  height: 45px;
+  border-radius: 4px;
+}
+
+.action-comment image {
+  width: 25px;
+  height: 25px;
+}
+
+.action-nickname {
+  color: pink;
+}
+
+.action-time {
+  color: grey;
+}

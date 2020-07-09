@@ -1,0 +1,13 @@
+.article-save {
+  padding: 10px;
+}
+
+textarea {
+  width: 100%;
+}
+
+button[disabled][type='primary'] {
+  opacity: .6 !important;
+  color: rgba(255, 255, 255, .6) !important;
+  background-color: #07c160 !important;
+}

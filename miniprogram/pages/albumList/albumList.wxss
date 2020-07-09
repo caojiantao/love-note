@@ -1,0 +1,48 @@
+.album-wrapper {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.album-cover-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: lightgray;
+}
+
+.album-cover-wrapper image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.album {
+  width: 48.5%;
+  margin-bottom: 10px;
+}
+
+.album-add {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: pink;
+}
+
+.album-add image {
+  position: static;
+  width: 64px;
+  height: 64px;
+}

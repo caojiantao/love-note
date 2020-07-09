@@ -1,0 +1,7 @@
+.publish image {
+  position: fixed;
+  width:42px;
+  height:42px;
+  bottom: 30px;
+  right: 20px;
+}

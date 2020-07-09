@@ -1,0 +1,19 @@
+<view class="couple-banner">
+  <view class="couple-info">
+    <image class="couple-mine" src="{{userInfo.avatarUrl}}"></image>
+    <image wx:if="{{partner}}" class="couple-partner" src="{{partner.avatarUrl}}"></image></view>
+  <view class="my-profile">
+    <view>{{userInfo.nickName}}</view>
+    <view wx:if="{{!partner}}" bindtap="toInvite">邀请另一半 ></view>
+  </view>
+</view>
+
+<mp-cells>
+  <mp-cell link hover value="情侣信息"/>
+  <mp-cell link hover value="里程碑"/>
+  <mp-cell link hover value="纪恋日" footer="3个"/>
+  <mp-cell link hover value="心事" bindtap="toArticleList"/>
+  <mp-cell link hover value="相册" url="/pages/albumList/albumList"/>
+</mp-cells>
+
+<PublishBall/>

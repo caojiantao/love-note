@@ -1,0 +1,3 @@
+<text class="description">{{description}}</text>
+
+<button open-type="share" type="primary">马上邀请</button>

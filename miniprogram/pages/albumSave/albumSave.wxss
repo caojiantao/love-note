@@ -1,0 +1,11 @@
+.album-cover {
+  width: 64px;
+  height: 64px;
+}
+
+
+button[disabled][type='primary'] {
+  opacity: .6 !important;
+  color: rgba(255, 255, 255, .6) !important;
+  background-color: #07c160 !important;
+}

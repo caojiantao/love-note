@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "Action": "../../components/action/action",
+    "PublishBall": "../../components/publishBall/publishBall",
+    "LoadMore": "../../components/loadMore/loadMore"
+  }
+}

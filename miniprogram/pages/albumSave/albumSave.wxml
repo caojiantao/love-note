@@ -1,0 +1,15 @@
+<mp-form>
+  <mp-cells>
+    <mp-cell>
+      <input bindinput="titleInputChange" data-field="title" class="weui-input" placeholder="请输入相册名称"/>
+    </mp-cell>
+
+    <mp-cell link value="设置封面" bindtap="setCover">
+      <image class="album-cover" wx:if="{{tmpCover}}" slot="footer" src="{{tmpCover}}" mode="aspectFill"></image>
+    </mp-cell>
+  </mp-cells>
+
+  <view class="weui-btn-area">
+    <button class="weui-btn" loading="{{submiting}}" disabled="{{submiting}}" form-type="submit" type="primary" bindtap="saveAlbum">发表</button>
+  </view>
+</mp-form>

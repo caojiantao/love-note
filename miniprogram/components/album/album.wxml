@@ -1,0 +1,3 @@
+<view>
+  <image src="{{album.cover}}"></image>
+</view>

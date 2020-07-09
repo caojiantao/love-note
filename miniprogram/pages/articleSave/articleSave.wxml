@@ -1,0 +1,6 @@
+<view class="article-save">
+  <form bindsubmit="articleSave">
+    <textarea placeholder="这一刻的想法..." name="content"/>
+    <button loading="{{submiting}}" disabled="{{submiting}}" form-type="submit" type="primary">发表</button>
+  </form>
+</view>
