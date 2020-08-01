@@ -1,3 +1,5 @@
+const auth = require("../../js/auth.js")
+
 Page({
 
   /**
@@ -8,13 +10,14 @@ Page({
   },
   articleSave (e) {
     this.setData({submiting: true});
-    let userId = getApp().globalData.userId;
+    let user = auth.getUser();
     let article = e.detail.value;
     wx.cloud.callFunction({
       name: "articleSave",
       data: {
         article: {
-          userId: userId,
+          userId: user._id,
+          coupleId: user.coupleId,
           content: article.content,
           timestamp: new Date().getTime()
         }

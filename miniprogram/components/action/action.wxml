@@ -3,21 +3,21 @@
     <image src="{{action.user.avatarUrl}}"></image>
   </view>
   <view class="action-main">
-    <view class="action-nickname">
+    <view class="{{action.user.gender===1 ? 'action-nickname-male' : 'action-nickname-female'}}">
       {{action.user.nickName}}
     </view>
     <!-- slot -->
     <view class="action-content">
-      <Article wx:if="{{action.type=='article'}}" article="{{action.article}}"></Article>
-      <Album wx:if="{{action.type=='album'}}" album="{{action.album}}"></Album>
+      <action-article wx:if="{{action.type=='article'}}" article="{{action.article}}"></action-article>
+      <action-album-image wx:if="{{action.type=='album_image'}}" albumImage="{{action.album_image}}"></action-album-image>
     </view>
     <view class="action-extra">
       <view class="action-time">
         {{action.timeFmt}}
       </view>
-      <view class="action-comment">
+      <!-- <view class="action-comment">
         <image src="/images/comment.png"></image>
-      </view>
+      </view> -->
     </view>
   </view>
 </view>

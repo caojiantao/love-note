@@ -35,17 +35,12 @@ Page({
     let album = this.data.album;
     album.cover = fileId;
     let user = auth.getUser();
-    album.userId = user._id;
     album.coupleId = user.coupleId;
-    
-    await wx.cloud.callFunction({
-      name: "saveAlbum",
-      data: {album: album}
-    }).then(() => {
-      this.setData({submiting: true});
-      wx.navigateBack();
-    });
+    album.userId = user._id;
+    album.timestamp = new Date().getTime();
+    await cloud.add("t_album", album);
     wx.hideLoading();
+    wx.navigateBack();
   },
   setCover () {
     wx.chooseImage({

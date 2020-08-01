@@ -1,0 +1,7 @@
+<mp-searchbar></mp-searchbar>
+
+<mp-cells>
+  <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+      <mp-cell value="左滑可以删除" footer="说明文字" data-id="1"></mp-cell>
+  </mp-slideview>
+</mp-cells>

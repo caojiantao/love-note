@@ -4,12 +4,9 @@ const checkLogin = async (options) => {
   let user = getApp().globalData.user;
   if (!user) {
     // 没有登录态 则尝试获取
-    let user = null;
-    await wx.cloud.callFunction({
+    let user = await wx.cloud.callFunction({
       name: "authorize",
-    }).then(res => {
-      user = res.result;
-    });
+    }).then(res => res.result);
     if (user) {
       getApp().globalData.user = user;
     } else {
@@ -27,7 +24,12 @@ const getUser = () => {
   return getApp().globalData.user;
 }
 
+const setUser = user => {
+  getApp().globalData.user = user;
+}
+
 module.exports = {
   checkLogin: checkLogin,
-  getUser: getUser
+  getUser: getUser,
+  setUser: setUser
 }

@@ -15,6 +15,8 @@ Page({
   async onLoad (options) {
     // 校验登录信息
     await auth.checkLogin(options);
+    let user = auth.getUser();
+    if (!user) return;
     // 校验是否是被邀请组 CP
     await this.checkIfInvite(options);
     this.appendActionList();
@@ -37,15 +39,18 @@ Page({
       return;
     }
     // 尝试组 CP
+    let user = auth.getUser();
     let coupleId = null;
     await wx.cloud.callFunction({
       name: "saveCouple",
       data: {
-        myId: auth.getUserId(),
+        myId: user._id,
         inviteId: options["inviteId"]
       },
     }).then(res => coupleId = res.result);
     if (coupleId) {
+      user.coupleId = coupleId;
+      auth.setUser(user);
       wx.showToast({
         title: "CP 成功",
       })
@@ -69,16 +74,18 @@ Page({
       }
     }).then(res => actionList = res.result);
     wx.hideNavigationBarLoading();
-    if (!reset) {
-      actionList = this.data.actionList.concat(actionList);
-    }
-    if (actionList && actionList.length > 0) {
+    if (!actionList || actionList.length == 0) {
+      // 没有更多
+      this.setData({finish: true});
+    } else {
       // 日期格式化
       actionList.forEach(action => {
         action["timeFmt"] = date.timeFmt(action.timestamp);
       })
-    } else {
-      this.setData({finish: true});
+    }
+    if (!reset) {
+      // 分页追加
+      actionList = this.data.actionList.concat(actionList || []);
     }
     this.setData({
       actionList: actionList,

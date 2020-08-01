@@ -7,7 +7,9 @@
     "pages/articleSave/articleSave",
     "pages/invite/invite",
     "pages/albumList/albumList",
-    "pages/albumSave/albumSave"
+    "pages/albumSave/albumSave",
+    "pages/albumDetail/albumDetail",
+    "pages/dayList/dayList"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -20,7 +22,7 @@
   "style": "v2",
   "tabBar": {
     "color": "#666666",
-    "selectedColor": "#1296db",
+    "selectedColor": "#FFCCCC",
     "backgroundColor": "#fff",
     "borderStyle": "white",
     "list": [

@@ -1,0 +1,10 @@
+<view class="image-list">
+  <view class="image-wrapper" wx:for="{{albumImage}}" wx:key="index">
+    <image src="{{item.fileId}}" mode="aspectFill" data-src="{{item.fileId}}" bindtap="preview"></image>
+  </view>
+</view>
+
+<view class="album" data-id="{{album._id}}" bindtap="toDetail">
+  <image src="{{album.cover}}" mode="aspectFill"></image>
+  <text>{{album.title}}</text>
+</view>

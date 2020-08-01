@@ -1,7 +1,9 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
 
-cloud.init()
+cloud.init({
+  env: 'pro-b2c3z',
+})
 
 async function checkValidUserId(myId, inviteId) {
   console.log(myId, inviteId);

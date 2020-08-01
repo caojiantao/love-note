@@ -1,5 +1,4 @@
 {
-  "navigationBarTitleText": "相册",
   "usingComponents": {
     "mp-actionSheet": "/miniprogram_npm/weui-miniprogram/actionsheet/actionsheet",
     "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog"

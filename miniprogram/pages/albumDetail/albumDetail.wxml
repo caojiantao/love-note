@@ -1,0 +1,18 @@
+<view class="album-banner">
+  <image class="album-cover" src="{{album.cover}}" mode="aspectFill"></image>
+  <text class="album-title">{{album.title}}</text>
+</view>
+
+<text class="album-description">{{album.description}}</text>
+
+<button class="btn-upload" bindtap="chooseImage" type="primary">上传照片</button>
+
+<view class="album-image">
+  <view class="image-wrapper" wx:for="{{albumImageList}}" wx:key="index">
+    <image src="{{item.fileId}}" mode="aspectFill" data-id="{{item._id}}" data-src="{{item.fileId}}" bindtap="preview" bindlongpress="showSheet"></image>
+  </view>
+</view>
+
+<mp-actionSheet bindactiontap="sheetClick" show="{{sheetShow}}" actions="{{sheetList}}">
+</mp-actionSheet>
+

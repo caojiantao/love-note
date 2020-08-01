@@ -9,11 +9,11 @@
 </view>
 
 <mp-cells>
-  <mp-cell link hover value="情侣信息"/>
-  <mp-cell link hover value="里程碑"/>
-  <mp-cell link hover value="纪恋日" footer="3个"/>
-  <mp-cell link hover value="心事" bindtap="toArticleList"/>
+  <!-- <mp-cell link hover value="情侣信息"/> -->
+  <!-- <mp-cell link hover value="里程碑"/> -->
+  <!-- <mp-cell link hover value="纪恋日" url="/pages/dayList/dayList"/> -->
+  <mp-cell link hover value="心事" url="/pages/articleList/articleList"/>
   <mp-cell link hover value="相册" url="/pages/albumList/albumList"/>
 </mp-cells>
 
-<PublishBall/>
+<!-- <PublishBall/> -->

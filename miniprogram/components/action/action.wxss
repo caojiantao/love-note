@@ -9,7 +9,7 @@
 
 .action-main {
   flex: auto;
-  padding: 0 10px;
+  margin-left: 10px;
 }
 
 .action-extra {
@@ -32,8 +32,12 @@
   height: 25px;
 }
 
-.action-nickname {
-  color: pink;
+.action-nickname-female {
+  color: #FF6666;
+}
+
+.action-nickname-male {
+  color: #0099CC;
 }
 
 .action-time {

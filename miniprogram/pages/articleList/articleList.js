@@ -1,4 +1,5 @@
 const cloud = require("../../js/cloud.js");
+const auth = require("../../js/auth.js");
 const date = require("../../js/date.js")
 
 Page({
@@ -40,11 +41,10 @@ Page({
       return;
     }
     wx.showNavigationBarLoading();
-    let userId = getApp().globalData.userId;
-    let user = await cloud.getById("t_user", userId);
+    let user = auth.getUser();
     let articleList = await cloud.getByCondition({
       table: "t_article",
-      where: {userId: userId},
+      where: {coupleId: user.coupleId},
       orderBy: {key: "timestamp", value: "desc"},
       page: {
         skip: (this.data.pageNo - 1) * this.data.pageSize,

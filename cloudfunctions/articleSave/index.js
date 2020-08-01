@@ -1,7 +1,9 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
 
-cloud.init()
+cloud.init({
+  env: 'pro-b2c3z',
+})
 
 // 云函数入口函数
 exports.main = async (event, context) => {
@@ -15,13 +17,11 @@ exports.main = async (event, context) => {
       return null;
     } else {
       // 新增
-      let articleId;
       await tArticle.add({
         data: article
       }).then(res => {
-        articleId = res._id
+        article._id = res._id
       });
-      article._id = articleId;
       // 添加动态
       await addArticleAction(article);
       return null;
@@ -35,7 +35,7 @@ async function addArticleAction (article) {
       type: "article",
       userId: article.userId,
       coupleId: article.coupleId,
-      relId: article._id,
+      refId: article._id,
       timestamp: new Date().getTime()
     }
   }).then(() => {});

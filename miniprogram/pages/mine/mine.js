@@ -16,7 +16,8 @@ Page({
    */
   onLoad: async function (options) {
     const _ = wx.cloud.database().command;
-    let userInfo = await auth.checkLogin();
+    await auth.checkLogin(options);
+    let userInfo = auth.getUser();
     this.setData({userInfo: userInfo});
     // 初始化老伴信息
     if (!userInfo.coupleId) {
@@ -80,11 +81,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  toArticleList () {
-    wx.navigateTo({
-      url: '/pages/articleList/articleList',
-    })
   },
   toInvite () {
     wx.navigateTo({
