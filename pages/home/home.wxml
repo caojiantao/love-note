@@ -1,0 +1,22 @@
+<tt-nav>
+  <view slot="left" class="nav-left">
+    <image src="/images/logo.png" mode="aspectFill"></image>
+    <text>恋爱记事本</text>
+  </view>
+  <view slot="right" class="nav-right">
+    <mp-icon icon="camera" class="nav-right-icon" bindtap="toAddTrend"></mp-icon>
+  </view>
+</tt-nav>
+
+<view style="height:{{menuBottom}}px;"></view>
+
+<view class="page-container">
+  <view wx:for="{{feedList}}" wx:key="index" class="home-feed-item">
+    <tt-trend wx:if="{{item.type=='TREND'}}" trend="{{item.trend}}"></tt-trend>
+  </view>
+</view>
+
+<!-- <mp-dialog show="{{showReplyDialog}}" bindbuttontap="replyInviter" buttons="{{replyButtons}}" ext-class="dialog-reply" mask-closable="{{false}}">
+  <image src="{{inviter.avatarUrl}}"></image>
+  <view>{{inviter.nickname}} 向您发出 CP 邀请</view>
+</mp-dialog> -->

@@ -1,0 +1,9 @@
+.page-container {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.home-feed-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #f6f6f6;
+}

@@ -1,0 +1,20 @@
+<view class="trend">
+  <view class="trend-avatar">
+    <image src="{{trend.user.avatarUrl}}"></image>
+  </view>
+  <view class="trend-main">
+    <view class="trend-nickname">{{trend.user.nickname}}</view>
+    <!-- slot -->
+    <text class="trend-content">{{trend.content}}</text>
+    <view class="trend-media">
+      <block wx:for="{{trend.mediaList}}" wx:key="index">
+        <view class="trend-media-item">
+          <image wx:if="{{item.type=='IMAGE'}}" src="{{item.image.url}}" bindtap="previewImage" data-src="{{item.image.url}}" mode="aspectFill"></image>
+        </view>
+      </block>
+    </view>
+    <view class="trend-foot">
+      <view class="trend-time">{{trend.timeFmt}}</view>
+    </view>
+  </view>
+</view>

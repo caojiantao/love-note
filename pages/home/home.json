@@ -1,0 +1,11 @@
+{
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tt-trend": "../../components/trend/trend",
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+    "tt-nav": "../../components/nav/nav",
+    "mp-icon": "weui-miniprogram/icon/icon"
+  }
+}

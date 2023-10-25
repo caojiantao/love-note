@@ -1,0 +1,5 @@
+<view class="page-container">
+  <view wx:for="{{feedList}}" wx:key="index" class="home-feed-item">
+    <tt-trend wx:if="{{item.type=='TREND'}}" trend="{{item.trend}}"></tt-trend>
+  </view>
+</view>

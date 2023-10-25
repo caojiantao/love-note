@@ -1,0 +1,27 @@
+<mp-cells>
+  <mp-cell link hover url="/pages/profile/profile">
+    <view class="profile">
+      <view class="avatar">
+        <image wx:if="{{user}}" class="avatar-mine" src="{{user.avatarUrl}}"></image>
+        <image wx:else class="avatar-login" src="/images/anonymous.png"></image>
+      </view>
+      <view class="profile-text">
+        <view class="profile-text-nickname" wx:if="{{!user}}">快速注册</view>
+        <view class="profile-text-nickname" wx:else>{{user.nickname}}</view>
+
+        <view wx:if="{{user && userCp}}" class="profile-text-tips">❤{{userPartner.nickname}}❤</view>
+        <button wx:if="{{user && !userCp}}" open-type="share" type="primary" catchtap="share" class="profile-text-tips">邀请恋人</button>
+        <view wx:if="{{!user && !userCp}}" class="profile-text-tips">开始您的恋人之旅</view>
+      </view>
+    </view>
+  </mp-cell>
+</mp-cells>
+<mp-cells>
+  <mp-cell link hover value="恋人动态" url="/pages/my-trend/my-trend"/>
+  <!-- <mp-cell link hover value="里程碑"/> -->
+  <!-- <mp-cell link hover value="纪恋日" url="/pages/dayList/dayList"/> -->
+  <!-- <mp-cell link hover value="相册" url="/pages/albumList/albumList" /> -->
+  <mp-cell link hover>
+    <button open-type="feedback" catchtap="feedback" class="btn-feedback">意见反馈</button>
+  </mp-cell>
+</mp-cells>

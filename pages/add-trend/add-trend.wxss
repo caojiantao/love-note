@@ -1,0 +1,60 @@
+page {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.trend-content {
+  min-height: 100px;
+  margin-bottom: 10px;
+}
+
+.trend-media {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  width: 100%;
+}
+
+.trend-media-item {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.trend-media image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.add-image {
+  background-color: #f0f0f0;
+}
+
+.add-image::before {
+  position: absolute;
+  left: calc(50% - 1px);
+  top: 35%;
+  content: "";
+  width: 2px;
+  height: 30%;
+  background-color: gray;
+}
+
+.add-image::after {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 35%;
+  content: "";
+  height: 2px;
+  width: 30%;
+  background-color: gray;
+}
+
+.weui-btn {
+  position: fixed;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+}

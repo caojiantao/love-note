@@ -1,0 +1,19 @@
+  <mp-form>
+    <view class="trend-content">
+      <textarea name="content" auto-height placeholder="这一刻的想法..." bindinput="setTrendContent" />
+    </view>
+
+    <view class="trend-media">
+      <block wx:for="{{images}}" wx:key="index">
+        <view class="trend-media-item" bindlongpress="showDeleteMenu" bindtap="previewImage" data-src="{{item}}" data-index="{{index}}">
+          <image src="{{item}}" mode="aspectFill"></image>
+        </view>
+      </block>
+
+      <view class="trend-media-item add-image" wx:if="{{showAddImage}}" bindtap="addImage">
+      </view>
+    </view>
+  </mp-form>
+  <view>
+    <button type="primary" class="weui-btn" bindtap="addTrend" disabled="{{disabledAdd}}">发布</button>
+  </view>

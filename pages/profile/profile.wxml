@@ -1,0 +1,23 @@
+<mp-form-page>
+  <mp-form>
+    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <image class="avatar" src="{{avatarUrl}}"></image>
+    </button>
+    <mp-cells>
+      <mp-cell title="昵称">
+        <input type="nickname" class="weui-input" placeholder="请输入昵称" bindinput="bindNicknameChange" value="{{nickname}}" />
+      </mp-cell>
+      <mp-cell title="性别">
+        <picker bindchange="bindGenderPickerChange" value="{{genderPickIndex}}" range="{{genderPickData}}" range-key="name">
+          <view class="picker">
+            {{genderPickData[genderPickIndex].name}}
+          </view>
+        </picker>
+      </mp-cell>
+    </mp-cells>
+  </mp-form>
+
+  <view slot="button">
+    <button type="primary" class="weui-btn" bindtap="saveUserProfile">确定</button>
+  </view>
+</mp-form-page>

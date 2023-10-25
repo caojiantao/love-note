@@ -1,0 +1,9 @@
+<view class="navigation-bar" style="height:{{menuHeight}}px;padding:{{padding}};">
+  <view class="navigation-bar__left" style="padding-left:{{menuGap}}px;">
+    <slot name="left"></slot>
+  </view>
+  <view wx:if="{{title}}" class="navigation-bar__title" style="height:{{menuHeight}}px;line-height:{{menuHeight}}px;top:{{menuTop}}px">{{title}}</view>
+  <view class="navigation-bar__right" style="margin-right:{{menuLeft2}}px;padding-right:{{menuGap}}px;">
+    <slot name="right"></slot>
+  </view>
+</view>

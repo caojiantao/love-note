@@ -1,0 +1,44 @@
+.page-container {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dialog-reply {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dialog-reply image {
+  width: 60px;
+  height: 60px;
+}
+
+.home-feed-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.nav-left {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-left image {
+  width: 20px;
+  height: 20px;
+  padding-right: 7px;
+}
+
+.nav-right-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: 0.8px solid #f0f0f0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

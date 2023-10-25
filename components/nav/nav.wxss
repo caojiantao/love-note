@@ -1,0 +1,31 @@
+.navigation-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.navigation-bar__left,
+.navigation-bar__right {
+  flex: 1;
+  height: 100%;
+}
+
+.navigation-bar__left,
+.navigation-bar__right {
+  display: flex;
+  align-items: center;
+}
+
+
+.navigation-bar__right {
+  flex-direction: row-reverse;
+}
+
+.navigation-bar__title {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
