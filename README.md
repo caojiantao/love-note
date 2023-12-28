@@ -3,6 +3,3 @@
 
 ![](screenshot.jpg)
 
-## 立刻体验
-
-![](qr.jpg)
